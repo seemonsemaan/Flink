@@ -1,0 +1,13 @@
+@model string
+
+
+<p>@Model</p>
+    @using (Html.BeginForm("RunJob",
+        "Home",
+        FormMethod.Post))
+    {
+        <input type="hidden" name="id" value="@Model" >
+        <input type="text" placeholder="Program Arguments" class="form-control" name="programArgs">
+
+        <input type="submit" value="Submit Job" class="btn btn-primary float-right mt-4">
+    }

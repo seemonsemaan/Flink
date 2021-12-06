@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flink", "Flink\Flink.csproj", "{010D66C9-34AD-4C64-85B8-3B096C4D316A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{010D66C9-34AD-4C64-85B8-3B096C4D316A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{010D66C9-34AD-4C64-85B8-3B096C4D316A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{010D66C9-34AD-4C64-85B8-3B096C4D316A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{010D66C9-34AD-4C64-85B8-3B096C4D316A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

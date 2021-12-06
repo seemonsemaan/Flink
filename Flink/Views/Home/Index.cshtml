@@ -1,0 +1,61 @@
+﻿@model IndexResult
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    @if (Model.JarFiles.Count > 0)
+    {
+        <h2>Jars</h2>
+    }
+    @foreach (var jarFile in Model.JarFiles)
+    {
+        <div class="row">
+            <a asp-action="RunJar" asp-route-id="@jarFile.id">@jarFile.name</a>
+        </div>
+    }
+    @using (Html.BeginForm("Index",
+        "Home",
+        FormMethod.Post,
+        new { enctype = "multipart/form-data" }))
+    {
+        <div class="row">
+            <input type="file" name="files" class="float-right col-md-4 offset-6">
+            <input type="submit" class="float-right btn btn-primary col-md-2" value="Add Jar"/>
+        </div>
+    }
+</div>
+
+
+<div>
+    @if (Model.Jobs.Count > 0)
+    {
+        <h2>Jobs</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Jobs.ElementAt(0).name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Jobs.ElementAt(0).state)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Jobs.ElementAt(0).duration)
+                </th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var job in Model.Jobs)
+            {
+                <tr>
+                    <td>@job.name</td>
+                    <td>@job.state</td>
+                    <td>@job.duration ms</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+</div>
